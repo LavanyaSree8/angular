@@ -1,0 +1,15 @@
+<h1 class="text-center text-primary">Todo app in Angular</h1>
+<div class="row">
+    <div class="col-6">
+        <div class="form-group">
+            <label for="newTask">Add new</label>
+            <input type="text" class="form-control" id="newTask" [(ngModel)]="taskinput">
+        </div>
+    </div>
+    <div class="col-3 mt-4">
+        <button class="btn btn-success" (click)="addtask()" [disabled]="!taskinput.length">Add</button>
+    </div>
+    <div class="col-3 mt-4">
+        <button class="btn btn-danger" (click)="addreset()">reset</button>
+    </div>
+</div>

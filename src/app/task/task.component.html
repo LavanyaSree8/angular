@@ -1,0 +1,25 @@
+<!-- <div class="container"> -->
+    <!-- <div class="row"> -->
+        <!-- <div class="col-xs-12"> -->
+            <!-- <label>username</label> -->
+            <!-- <input type="text" class="form-control" [(ngModel)]="data"> -->
+            <!-- <p>{{data}}</p> -->
+            <!-- <button class="btn btn-primary" [disabled]="data===''" (click)="data=''">Reset</button>  -->
+            <!-- <button class="btn btn-primary" (click)="show=!show">details</button> -->
+            <!-- <button class="btn btn-primary" (click)="ontoggle()">details</button> -->
+            <!-- <p *ngIf="!show">password is lavs</p> -->
+            <!-- <div *ngfor="let l of log">{{l}}</div> -->
+
+        <!-- </div> -->
+    <!-- </div> -->
+
+<!-- </div> -->
+<form [formGroup]="regform">
+    username:
+    <input type="text" class="FormControl w-50 m-3" formControlName="uname">
+    <p *ngIf="regform.get('uname')?.touched && regform.get('uname')?.hasError('minlength')">username is  required</p><br>
+    password:
+    <input type="email" class="formControl w-50 m-3" formControlName="email">
+    <p *ngIf="regform.get('email')?.touched && regform.get('email')?.hasError('required')">password is required</p><br>
+    <button class="btn btn-primary" (click)="show()">save</button>
+</form>

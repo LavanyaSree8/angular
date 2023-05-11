@@ -1,0 +1,12 @@
+<div class="wrapper">
+    <button class="btn btn-primary" (click)="openDialog()">Popup</button>
+</div>
+<div *ngIf="show">
+    <div class="content">
+        username:
+        <input type="text" class="form-control">
+        password:
+        <input type="text" class="form-control">
+        <button class="btn btn-primary">sign in</button>
+    </div>
+</div>

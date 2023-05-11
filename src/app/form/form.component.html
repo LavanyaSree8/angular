@@ -1,0 +1,39 @@
+<form [formGroup]="regForm">
+    username:
+    <input type="text" required class="form-control w-50 m-2" formControlName="uname">
+    <div *ngIf="regForm.get('uname')?.touched && regForm.get('uname')?.hasError"></div>
+    Password:
+    <input type="text" required class="form-control w-50 m-2" formControlName="password">
+    <div *ngIf="regForm.get('password')?.touched && regForm.get('password')?.hasError"></div>
+    Email:
+    <input type="text" required class="form-control w-50 m-2" formControlName="email">
+    <div *ngIf="regForm.get('email')?.touched && regForm.get('email')?.hasError"></div>
+    <!-- <div formArrayName="mobiles">
+        <ng-container *ngFor="let m of this.regForm.get('mobiles')['controls']let i=index">
+            mobileno {{i}}<input type="number" class="form-control w-50 m-3 formControlName={{i}}">
+        </ng-container>
+
+    </div> -->
+    <button class="btn btn-primary" (click)="save()">Save</button>
+</form>
+
+
+
+<table>
+    <thead>
+        <tr>
+            <th>UserName</th>
+            <th>Password</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of table, let i = index">
+            <td>{{item.uname}}</td>
+            <td>{{item.password}}</td>
+            <td>{{item.email}}</td>
+            <td><button class="btn btn-success" (click)="edit(item)">Edit</button></td>
+            <td><button class="btn btn-danger" (click)="delete(i)">Delete</button></td>
+        </tr>
+    </tbody>
+</table>

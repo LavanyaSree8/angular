@@ -1,0 +1,7 @@
+<form [formGroup]="regform">
+    password:
+    <input type="text" class="form-control w-50 m-2" formControlName ="password">
+    <p *ngIf="regform.get('password')?.touched && regform.get('password')?.hasError('noupper')">Uppercase letter is required</p>
+    <button class="btn btn-primary" (click)="show()">click</button>
+    
+</form>

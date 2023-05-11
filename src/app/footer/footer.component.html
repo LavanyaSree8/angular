@@ -1,0 +1,33 @@
+<form>
+    <label>fname</label>
+    <input type="text"><br>
+    <label>lname</label>
+    <input type="text">
+</form>
+<button class="btn btn-primary head" type="button" routerLink="/task">continue</button><br>
+<h1 *ngIf="!data; then load; else sample "></h1>
+<ng-template #load>
+    loading
+</ng-template>
+<ng-template #sample>
+    {{data}}
+</ng-template>
+<h1>{{ "angular" | uppercase}}</h1>
+<!-- <h1>{{wish | pipes}}</h1> -->
+<h3>{{childdata}}</h3>
+<form>
+    
+    <label>username</label><br>
+    <input required type="text" class="formControl w-50 m-2" minlength="3" ngModel name="uname" #un="ngModel"><br>
+    <p *ngIf="un.touched&&un.errors?.['required']" class="er">username is required</p>
+
+    <label>password</label><br>
+    <input required type="password" class="formControl w-50 m-2" minlength="3" ngModel name="password" #p="ngModel">
+    
+        <p *ngIf="p.touched&&p.errors?.['required']" class="er">password must be length 3</p>
+    
+
+<button (click)="save(un,p)">save</button>
+
+</form>
+

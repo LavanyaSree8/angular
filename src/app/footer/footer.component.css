@@ -1,0 +1,14 @@
+.head{
+    text-align: center;
+    margin-left: 539px;
+    margin-top: 104px;
+}
+.er{
+    color:red;
+}
+input.ng-touched.ng-invalid{
+    border-color: red;
+}
+input.ng-touched.ng-valid{
+    border-color: green;
+}
