@@ -1,0 +1,17 @@
+<div class="container">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Country Name</th>
+                <th>Country population</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let i of cContainArray">
+                <td>{{i.name}}</td>
+                <!-- <td><img [src]="i.flag"></td> -->
+                <td>{{i.population}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

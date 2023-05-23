@@ -31,7 +31,9 @@ import { freeApiService } from './services/freeapi.service';
 import { PopupComponent } from './popup/popup.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatDialogModule} from '@angular/material/dialog';
-
+import { ArraysComponent } from './arrays/arrays.component';
+import { CheckboxComponent } from './checkbox/checkbox.component';
+import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 
 @NgModule({
   declarations: [
@@ -55,6 +57,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     OperatorsComponent,
     IntegrationComponent,
     PopupComponent,
+    ArraysComponent,
+    CheckboxComponent,
     
   ],
   imports: [
@@ -65,7 +69,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatDialogModule
+    MatDialogModule,
+    NgMultiSelectDropDownModule.forRoot()
 
   ],
   providers: [TodoService,freeApiService],
